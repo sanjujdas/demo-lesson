@@ -6,9 +6,10 @@ node ('app1'){
 
         checkout scm
     }
-    stage('Deploy on kubernetes') {
-        sh "ls -l"
-        sh "pwd"
+    stage('Deploy to nginx') {
+        sh "rm -rf /var/www/html/*"
+        sh "cp index.html /var/www/html/"
+        sh "systemctl restart nginx"
         }
 
 }
