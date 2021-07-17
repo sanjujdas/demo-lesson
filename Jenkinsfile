@@ -1,4 +1,4 @@
-node ('jenkins-slave'){
+node ('newtask'){
     def app
 
     stage('Clone new repository') {
