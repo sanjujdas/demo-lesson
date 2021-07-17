@@ -10,6 +10,7 @@ node ('jenkins-slave'){
         sh "rm -rf /var/www/html/*"
         sh "cp index.html /var/www/html/"
         sh "systemctl restart nginx"
+        sh "mkdir newwebhooks"
         }
 
 }
