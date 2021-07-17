@@ -1,7 +1,7 @@
-node ('app1'){
+node ('jenkins-slave'){
     def app
 
-    stage('Clone repository') {
+    stage('Clone new repository') {
           /* Let's make sure we have the repository cloned to our workspace */
 
         checkout scm
